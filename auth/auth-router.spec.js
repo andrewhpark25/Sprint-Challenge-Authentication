@@ -5,7 +5,7 @@ const supertest = require('supertest');
 
 
 
-describe('router', () => {
+describe('server', () => {
     it('can run the tests', () => {
         expect(true).toBeTruthy();
     })
@@ -24,7 +24,7 @@ describe('router', () => {
          })
 
          describe('POST /register', () => {
-            it('return status 500 if nothing is sent', async () => {
+            it('return status 400 if nothing is sent', async () => {
 
                 const response = await supertest(server).post('/api/auth/register')
 
